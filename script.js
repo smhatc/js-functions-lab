@@ -108,18 +108,16 @@ Complete the exercise in the space below:
 
 const maxOfThree = (num1, num2, num3) => {
   let largestNum;
-  for (let i = 0; i < 3; i++) {
-    if (num1 > num2 && num1 > num3) {
-      largestNum = num1;
-    } else if (num2 > num1 && num2 > num3) {
-      largestNum = num2;
-    } else if (num3 > num1 && num3 > num2) {
-      largestNum = num3;
-    } else {
-      return 'Two or more numbers are equal.';
-    }
-    return largestNum;
+  if (num1 > num2 && num1 > num3) {
+    largestNum = num1;
+  } else if (num2 > num1 && num2 > num3) {
+    largestNum = num2;
+  } else if (num3 > num1 && num3 > num2) {
+    largestNum = num3;
+  } else {
+    return 'Two or more numbers are equal.';
   }
+  return largestNum;
 }
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
